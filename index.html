@@ -521,57 +521,294 @@ body {
   }
 }
 
+
+/* ===== 更活潑版 ===== */
+body::after {
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  background:
+    radial-gradient(circle at 6% 18%, rgba(255,192,107,.16) 0 7px, transparent 8px),
+    radial-gradient(circle at 94% 28%, rgba(100,169,164,.15) 0 8px, transparent 9px),
+    radial-gradient(circle at 9% 74%, rgba(91,130,182,.14) 0 6px, transparent 7px),
+    radial-gradient(circle at 88% 88%, rgba(213,120,82,.12) 0 9px, transparent 10px);
+  background-size: 150px 150px, 180px 180px, 170px 170px, 210px 210px;
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 16% 26%, rgba(255,255,255,.92) 0 2px, transparent 3px),
+    radial-gradient(circle at 78% 22%, rgba(255,255,255,.76) 0 2px, transparent 3px),
+    radial-gradient(circle at 34% 76%, rgba(255,220,151,.70) 0 3px, transparent 4px),
+    linear-gradient(135deg,#27476a 0%,#3e7086 48%,#b98955 100%);
+}
+.hero::before {
+  background:
+    radial-gradient(circle,rgba(255,224,152,.72),rgba(255,214,124,0) 68%);
+}
+.hero::after {
+  background:
+    radial-gradient(ellipse,rgba(185,230,255,.58),rgba(174,216,255,0) 72%);
+}
+.hero h1::before,
+.hero h1::after {
+  content:"✦";
+  display:inline-block;
+  font-size:.42em;
+  color:#ffe4a2;
+  margin:0 .5em;
+  vertical-align:.4em;
+  text-shadow:none;
+}
+.hero h1::after { content:"✧"; }
+
+.content-section {
+  border:2px solid rgba(255,255,255,.78);
+}
+.content-section:nth-of-type(2n) {
+  transform:rotate(.18deg);
+}
+.content-section:nth-of-type(2n+1) {
+  transform:rotate(-.16deg);
+}
+
+.content-section h2 {
+  display:inline-block;
+  padding-right:1.3em;
+}
+.content-section h2::before {
+  content:"";
+  display:inline-block;
+  width:.68em;
+  height:.68em;
+  margin-right:.45em;
+  border-radius:38% 62% 55% 45%;
+  background:linear-gradient(135deg,#6fb7b2,#f0bb62);
+  transform:rotate(18deg);
+  vertical-align:-.02em;
+  box-shadow:0 3px 8px rgba(70,100,100,.12);
+}
+
+.theme-river {
+  background:
+    linear-gradient(155deg,rgba(255,255,255,.93),rgba(233,246,247,.88));
+}
+.theme-fire {
+  background:
+    linear-gradient(155deg,rgba(255,255,255,.93),rgba(255,244,226,.90));
+}
+.theme-wheel {
+  background:
+    linear-gradient(155deg,rgba(255,255,255,.94),rgba(244,239,229,.90));
+}
+
+/* 可愛小貼紙感 */
+.item-title {
+  position:relative;
+  overflow:visible;
+}
+.item-title::after {
+  content:"";
+  position:absolute;
+  right:10px;
+  top:-6px;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:rgba(240,187,98,.58);
+  box-shadow:
+    18px 8px 0 rgba(100,169,164,.42),
+    35px -2px 0 rgba(213,120,82,.30);
+}
+
+/* 經文區加一點活潑層次 */
+.verse-block {
+  position:relative;
+  overflow:hidden;
+}
+.verse-block::before {
+  content:"";
+  position:absolute;
+  width:110px;
+  height:110px;
+  right:-45px;
+  top:-52px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle,rgba(240,187,98,.16),rgba(240,187,98,0) 68%);
+}
+.verse-block::after {
+  content:"";
+  position:absolute;
+  left:16px;
+  bottom:8px;
+  width:52px;
+  height:6px;
+  border-radius:999px;
+  background:linear-gradient(90deg,rgba(100,169,164,.28),rgba(91,130,182,.20));
+}
+
+/* 最下方問候卡 */
+.farewell-card {
+  width:min(900px,calc(100% - 28px));
+  margin:28px auto 54px;
+  min-height:220px;
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
+  border-radius:34px;
+  border:2px solid rgba(255,255,255,.86);
+  background:
+    radial-gradient(circle at 12% 18%,rgba(255,255,255,.76) 0 5px,transparent 6px),
+    radial-gradient(circle at 83% 22%,rgba(255,255,255,.58) 0 4px,transparent 5px),
+    linear-gradient(135deg,#dff3ef 0%,#fff0d5 48%,#f6ded2 100%);
+  box-shadow:
+    0 18px 46px rgba(64,79,92,.12),
+    inset 0 1px 0 rgba(255,255,255,.92);
+}
+.farewell-content {
+  position:relative;
+  z-index:3;
+  text-align:center;
+  padding:34px 26px;
+}
+.farewell-content p {
+  margin:8px 0 4px;
+  font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif;
+  font-weight:900;
+  color:#355267;
+  font-size:clamp(1.5rem,5vw,2.2rem);
+  line-height:1.45;
+  letter-spacing:.07em;
+  text-shadow:0 2px 0 rgba(255,255,255,.70);
+}
+.farewell-sparkles {
+  color:#d69b43;
+  font-size:1.25rem;
+  letter-spacing:.15em;
+}
+.farewell-smile {
+  margin-top:10px;
+  font-size:1.8rem;
+  color:#d0785a;
+  transform:rotate(-6deg);
+}
+.farewell-bubble {
+  position:absolute;
+  border-radius:50%;
+  opacity:.55;
+}
+.bubble-a {
+  width:140px;height:140px;
+  left:-42px;bottom:-30px;
+  background:#9fd7cf;
+}
+.bubble-b {
+  width:112px;height:112px;
+  right:-28px;top:-26px;
+  background:#f5c272;
+}
+.bubble-c {
+  width:76px;height:76px;
+  right:16%;bottom:-22px;
+  background:#eaa083;
+}
+.farewell-confetti span {
+  position:absolute;
+  width:10px;
+  height:22px;
+  border-radius:999px;
+  opacity:.48;
+  transform:rotate(var(--r,20deg));
+}
+.farewell-confetti span:nth-child(1){left:8%;top:18%;background:#df8b72;--r:28deg;}
+.farewell-confetti span:nth-child(2){left:18%;top:72%;background:#6ca9a4;--r:-32deg;}
+.farewell-confetti span:nth-child(3){left:30%;top:15%;background:#e6b75b;--r:48deg;}
+.farewell-confetti span:nth-child(4){left:42%;top:78%;background:#86a8cc;--r:14deg;}
+.farewell-confetti span:nth-child(5){left:55%;top:12%;background:#6ca9a4;--r:-14deg;}
+.farewell-confetti span:nth-child(6){left:69%;top:75%;background:#df8b72;--r:35deg;}
+.farewell-confetti span:nth-child(7){left:82%;top:18%;background:#e6b75b;--r:-35deg;}
+.farewell-confetti span:nth-child(8){left:90%;top:68%;background:#86a8cc;--r:21deg;}
+.farewell-confetti span:nth-child(9){left:12%;top:45%;background:#e6b75b;--r:65deg;}
+.farewell-confetti span:nth-child(10){left:76%;top:48%;background:#6ca9a4;--r:72deg;}
+.farewell-confetti span:nth-child(11){left:36%;top:40%;background:#df8b72;--r:-54deg;}
+.farewell-confetti span:nth-child(12){left:62%;top:42%;background:#86a8cc;--r:-8deg;}
+
+@media (max-width:640px) {
+  .content-section:nth-of-type(n) { transform:none; }
+  .hero h1::before,
+  .hero h1::after {
+    margin:0 .28em;
+  }
+  .farewell-card {
+    width:calc(100% - 20px);
+    min-height:190px;
+    border-radius:26px;
+    margin:22px auto 34px;
+  }
+  .farewell-content {
+    padding:28px 20px;
+  }
+  .farewell-content p {
+    font-size:1.55rem;
+    letter-spacing:.035em;
+  }
+}
+
+
+/* ===== 經文卡片結構修正 ===== */
+.scripture-card {
+  margin: 18px 0 24px;
+  padding: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  background: rgba(255,255,255,.70);
+  border: 1px solid rgba(91,130,182,.10);
+  box-shadow: 0 10px 28px rgba(45,67,88,.06);
+  position: relative;
+  z-index: 1;
+}
+.scripture-card-title {
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 14px 18px;
+  background: linear-gradient(90deg,rgba(91,130,182,.13),rgba(100,169,164,.10),rgba(240,187,98,.08));
+}
+.scripture-card .verse-block {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  padding: 18px 18px 20px;
+}
+@media (max-width:640px) {
+  .scripture-card {
+    margin: 14px 0 20px;
+    border-radius: 18px;
+  }
+  .scripture-card-title {
+    padding: 13px 15px;
+  }
+  .scripture-card .verse-block {
+    padding: 15px 14px 17px;
+  }
+}
+
 </style>
 </head>
 <body>
 <header class="hero"><div class="hero-orbit"></div><h1>2026年高屏澎青職特會豫讀材料</h1></header>
 <section class="content-section theme-river"><div class="section-deco" aria-hidden="true"></div>
 <h2>經文</h2>
-<p class="item-title">引言：1～3節</p>
-<div class="verse-block">
-<div class="verse-line"><span class="verse-ref">結1:1</span><span class="verse-text">第三十年四月初五日，我在<a class="fn-link" href="#note-1-1-2" aria-label="跳到1章1節註2"><sup class="fn">2</sup></a>迦巴魯河邊被擄的人中，那時諸天開了，我就看見神的異象。</span></div>
-<div class="verse-line"><span class="verse-ref">結1:2</span><span class="verse-text">正是約雅斤王被擄去第五年，四月初五日，</span></div>
-<div class="verse-line"><span class="verse-ref">結1:3</span><span class="verse-text">在迦勒底人之地，迦巴魯河邊，耶和華的話特特臨到布西的兒子祭司以西結；耶和華的手在那裡臨到他身上。</span></div>
-</div>
-<div class="verse-line"><span class="verse-ref">結1:2</span><span class="verse-text">正是約雅斤王被擄去第五年，四月初五日，</span></div>
-<div class="verse-line"><span class="verse-ref">結1:3</span><span class="verse-text">在迦勒底人之地，迦巴魯河邊，耶和華的話特特臨到布西的兒子祭司以西結；耶和華的手在那裡臨到他身上。</span></div>
-</div>
-<p class="item-title">風雲火金：4節</p>
-<div class="verse-block">
-<div class="verse-line"><span class="verse-ref">結1:4</span><span class="verse-text">我觀看，見暴<a class="fn-link" href="#note-1-4-1" aria-label="跳到1章4節註1"><sup class="fn">1</sup></a>風從北方刮來，有一朵大雲，有火不斷的閃爍，周圍有光輝；從其中，就是從火中所發出的，看來好像光耀的金銀合金。</span></div>
-</div>
-</div>
-<p class="item-title">四活物：5～14節</p>
-<div class="verse-block">
-<div class="verse-line"><span class="verse-ref">結1:5</span><span class="verse-text">又從其中顯出四個活物的樣式來。他們顯出來的樣子是這樣：有人的樣式，</span></div>
-<div class="verse-line"><span class="verse-ref">結1:6</span><span class="verse-text">各有四個臉面，四個翅膀。</span></div>
-<div class="verse-line"><span class="verse-ref">結1:7</span><span class="verse-text">他們的腿是直的，腳掌好像牛犢之蹄，燦爛如明亮的銅。</span></div>
-<div class="verse-line"><span class="verse-ref">結1:8</span><span class="verse-text">在四面的翅膀以下有人的手。這四個活物各有臉面和翅膀如下：</span></div>
-<div class="verse-line"><span class="verse-ref">結1:9</span><span class="verse-text">他們的翅膀彼此相接；他們行走並不轉身，俱各直往前行。</span></div>
-<div class="verse-line"><span class="verse-ref">結1:10</span><span class="verse-text">至於臉的樣式，四活物前面各有<a class="fn-link" href="#note-1-10-1" aria-label="跳到1章10節註1"><sup class="fn">1</sup></a>人的臉，右面各有<a class="fn-link" href="#note-1-10-1" aria-label="跳到1章10節註1"><sup class="fn">1</sup></a>獅子的臉，左面各有<a class="fn-link" href="#note-1-10-1" aria-label="跳到1章10節註1"><sup class="fn">1</sup></a>牛的臉，後面各有鷹的臉。</span></div>
-<div class="verse-line"><span class="verse-ref">結1:11</span><span class="verse-text">他們的臉就是如此。他們的翅膀向上展開；各有兩個翅膀彼此相接，兩個翅膀遮體。</span></div>
-<div class="verse-line"><span class="verse-ref">結1:12</span><span class="verse-text">他們俱各直往前行；靈往那裡去，他們就往那裡去，行走並不轉身。</span></div>
-<div class="verse-line"><span class="verse-ref">結1:13</span><span class="verse-text">至於活物的樣式，他們的樣子如同燒著的火炭，如同火把的樣子；火在活物中間來回閃動，這火有光輝，從火中發出閃電。</span></div>
-<div class="verse-line"><span class="verse-ref">結1:14</span><span class="verse-text">活物往來奔走，好像閃電的樣子。</span></div>
-</div>
-<div class="verse-line"><span class="verse-ref">結1:6</span><span class="verse-text">各有四個臉面，四個翅膀。</span></div>
-<div class="verse-line"><span class="verse-ref">結1:7</span><span class="verse-text">他們的腿是直的，腳掌好像牛犢之蹄，燦爛如明亮的銅。</span></div>
-<div class="verse-line"><span class="verse-ref">結1:8</span><span class="verse-text">在四面的翅膀以下有人的手。這四個活物各有臉面和翅膀如下：</span></div>
-<div class="verse-line"><span class="verse-ref">結1:9</span><span class="verse-text">他們的翅膀彼此相接；他們行走並不轉身，俱各直往前行。</span></div>
-<div class="verse-line"><span class="verse-ref">結1:10</span><span class="verse-text">至於臉的樣式，四活物前面各有<sup class="fn">1</sup>人的臉，右面各有<sup class="fn">1</sup>獅子的臉，左面各有<sup class="fn">1</sup>牛的臉，後面各有鷹的臉。</span></div>
-<div class="verse-line"><span class="verse-ref">結1:11</span><span class="verse-text"><sup class="fn">1</sup>他們的臉就是如此。他們的翅膀向上展開；各有兩個翅膀彼此<sup class="fn">2</sup>相接，兩個翅膀<sup class="fn">3</sup>遮體。</span></div>
-<div class="verse-line"><span class="verse-ref">結1:12</span><span class="verse-text">他們俱各直往前行；靈往那裡去，他們就往那裡去，行走並不轉身。</span></div>
-<div class="verse-line"><span class="verse-ref">結1:13</span><span class="verse-text">至於活物的樣式，他們的樣子如同燒著的火炭，如同火把的樣子；火在活物中間來回閃動，這火有光輝，從火中發出閃電。</span></div>
-<div class="verse-line"><span class="verse-ref">結1:14</span><span class="verse-text">活物往來奔走，好像閃電的樣子。</span></div>
-</div>
-<p class="item-title">高而可畏的輪子：15、19節</p>
-<div class="verse-block">
-<div class="verse-line"><span class="verse-ref">結1:15</span><span class="verse-text">我正觀看活物的時候，見活物的四個<a class="fn-link" href="#note-1-15-1" aria-label="跳到1章15節註1"><sup class="fn">1</sup></a>臉旁各有一<a class="fn-link" href="#note-1-15-2" aria-label="跳到1章15節註2"><sup class="fn">2</sup></a>輪在地上。</span></div>
-<div class="verse-line"><span class="verse-ref">結1:19</span><span class="verse-text">活物行走的時候，輪也在旁邊行走；活物從地上升的時候，輪也上升。</span></div>
-</div>
-<div class="verse-line"><span class="verse-ref">結1:19</span><span class="verse-text">活物<sup class="fn">1</sup>行走的時候，輪也在旁邊行走；活物從地上升的時候，輪也上升。</span></div>
-</div>
-<div class="original-space" aria-hidden="true"></div>
+<div class="scripture-card"><p class="item-title scripture-card-title">引言：1～3節</p><div class="verse-block"><div class="verse-line"><span class="verse-ref">結1:1</span><span class="verse-text">第三十年四月初五日，我在<a class="fn-link" href="#note-1-1-2" aria-label="跳到1章1節註2"><sup class="fn">2</sup></a>迦巴魯河邊被擄的人中，那時諸天開了，我就看見神的異象。</span></div><div class="verse-line"><span class="verse-ref">結1:2</span><span class="verse-text">正是約雅斤王被擄去第五年，四月初五日，</span></div><div class="verse-line"><span class="verse-ref">結1:3</span><span class="verse-text">在迦勒底人之地，迦巴魯河邊，耶和華的話特特臨到布西的兒子祭司以西結；耶和華的手在那裡臨到他身上。</span></div></div></div>
+<div class="scripture-card"><p class="item-title scripture-card-title">風雲火金：4節</p><div class="verse-block"><div class="verse-line"><span class="verse-ref">結1:4</span><span class="verse-text">我觀看，見暴<a class="fn-link" href="#note-1-4-1" aria-label="跳到1章4節註1"><sup class="fn">1</sup></a>風從北方刮來，有一朵大雲，有火不斷的閃爍，周圍有光輝；從其中，就是從火中所發出的，看來好像光耀的金銀合金。</span></div></div></div>
+<div class="scripture-card"><p class="item-title scripture-card-title">四活物：5～14節</p><div class="verse-block"><div class="verse-line"><span class="verse-ref">結1:5</span><span class="verse-text">又從其中顯出四個活物的樣式來。他們顯出來的樣子是這樣：有人的樣式，</span></div><div class="verse-line"><span class="verse-ref">結1:6</span><span class="verse-text">各有四個臉面，四個翅膀。</span></div><div class="verse-line"><span class="verse-ref">結1:7</span><span class="verse-text">他們的腿是直的，腳掌好像牛犢之蹄，燦爛如明亮的銅。</span></div><div class="verse-line"><span class="verse-ref">結1:8</span><span class="verse-text">在四面的翅膀以下有人的手。這四個活物各有臉面和翅膀如下：</span></div><div class="verse-line"><span class="verse-ref">結1:9</span><span class="verse-text">他們的翅膀彼此相接；他們行走並不轉身，俱各直往前行。</span></div><div class="verse-line"><span class="verse-ref">結1:10</span><span class="verse-text">至於臉的樣式，四活物前面各有<a class="fn-link" href="#note-1-10-1" aria-label="跳到1章10節註1"><sup class="fn">1</sup></a>人的臉，右面各有<a class="fn-link" href="#note-1-10-1" aria-label="跳到1章10節註1"><sup class="fn">1</sup></a>獅子的臉，左面各有<a class="fn-link" href="#note-1-10-1" aria-label="跳到1章10節註1"><sup class="fn">1</sup></a>牛的臉，後面各有鷹的臉。</span></div><div class="verse-line"><span class="verse-ref">結1:11</span><span class="verse-text">他們的臉就是如此。他們的翅膀向上展開；各有兩個翅膀彼此相接，兩個翅膀遮體。</span></div><div class="verse-line"><span class="verse-ref">結1:12</span><span class="verse-text">他們俱各直往前行；靈往那裡去，他們就往那裡去，行走並不轉身。</span></div><div class="verse-line"><span class="verse-ref">結1:13</span><span class="verse-text">至於活物的樣式，他們的樣子如同燒著的火炭，如同火把的樣子；火在活物中間來回閃動，這火有光輝，從火中發出閃電。</span></div><div class="verse-line"><span class="verse-ref">結1:14</span><span class="verse-text">活物往來奔走，好像閃電的樣子。</span></div></div></div>
+<div class="scripture-card"><p class="item-title scripture-card-title">高而可畏的輪子：15、19節</p><div class="verse-block"><div class="verse-line"><span class="verse-ref">結1:15</span><span class="verse-text">我正觀看活物的時候，見活物的四個<a class="fn-link" href="#note-1-15-1" aria-label="跳到1章15節註1"><sup class="fn">1</sup></a>臉旁各有一<a class="fn-link" href="#note-1-15-2" aria-label="跳到1章15節註2"><sup class="fn">2</sup></a>輪在地上。</span></div><div class="verse-line"><span class="verse-ref">結1:19</span><span class="verse-text">活物行走的時候，輪也在旁邊行走；活物從地上升的時候，輪也上升。</span></div></div></div>
 </section>
 <section class="content-section theme-fire"><div class="section-deco" aria-hidden="true"></div>
 <h2>註解</h2>
@@ -615,5 +852,21 @@ body {
   update();
 })();
 </script>
+
+<footer class="farewell-card" aria-label="特會問候">
+  <div class="farewell-confetti" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="farewell-bubble bubble-a" aria-hidden="true"></div>
+  <div class="farewell-bubble bubble-b" aria-hidden="true"></div>
+  <div class="farewell-bubble bubble-c" aria-hidden="true"></div>
+  <div class="farewell-content">
+    <div class="farewell-sparkles" aria-hidden="true">✦　✧　✦</div>
+    <p>感謝主！大家10/3、4青職特會見！</p>
+    <div class="farewell-smile" aria-hidden="true">◡̈</div>
+  </div>
+</footer>
+
 </body>
 </html>
