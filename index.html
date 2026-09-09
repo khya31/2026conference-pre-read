@@ -301,6 +301,56 @@ h2::after {
     break-inside:avoid-page;
   }
 }
+
+.verse-block {
+  margin: 10px 0 28px;
+  padding: 18px 18px 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.58);
+  border: 1px solid rgba(36,50,71,.08);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.75);
+  position: relative;
+  z-index: 1;
+}
+.verse-line {
+  display: grid;
+  grid-template-columns: 4.9em 1fr;
+  gap: .45em;
+  align-items: start;
+  margin: 0 0 10px;
+  font-size: clamp(1.02rem,3.8vw,1.16rem);
+  line-height: 1.9;
+}
+.verse-line:last-child { margin-bottom: 0; }
+.verse-ref {
+  font-family: "Microsoft JhengHei","Noto Sans TC",sans-serif;
+  font-weight: 700;
+  color: #4e6680;
+  white-space: nowrap;
+}
+.verse-text { color: #2e3949; }
+.fn {
+  color: #c43d3d;
+  font-family: "Microsoft JhengHei","Noto Sans TC",sans-serif;
+  font-weight: 800;
+  font-size: .67em;
+  line-height: 0;
+  vertical-align: super;
+  margin: 0 .04em;
+}
+@media (max-width:640px) {
+  .verse-block {
+    padding: 15px 14px 14px;
+    margin-bottom: 24px;
+  }
+  .verse-line {
+    grid-template-columns: 4.55em 1fr;
+    gap: .35em;
+    font-size: 1.055rem;
+    line-height: 1.9;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -308,9 +358,33 @@ h2::after {
 <section class="content-section theme-river"><div class="section-deco" aria-hidden="true"></div>
 <h2>經文</h2>
 <p class="item-title">引言：1～3節</p>
+<div class="verse-block">
+<div class="verse-line"><span class="verse-ref">結1:1</span><span class="verse-text">第三十年四月初五日，我在<sup class="fn">2</sup>迦巴魯河邊被擄的人中，那時諸天開了，我就看見神的異象。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:2</span><span class="verse-text">正是約雅斤王被擄去第五年，四月初五日，</span></div>
+<div class="verse-line"><span class="verse-ref">結1:3</span><span class="verse-text">在迦勒底人之地，迦巴魯河邊，耶和華的話特特臨到布西的兒子祭司以西結；耶和華的手在那裡臨到他身上。</span></div>
+</div>
 <p class="item-title">風雲火金：4節</p>
+<div class="verse-block">
+<div class="verse-line"><span class="verse-ref">結1:4</span><span class="verse-text">我觀看，見暴<sup class="fn">1</sup>風從北方刮來，有一朵大雲，有火不斷的閃爍，周圍有光輝；從其中，就是從火中所發出的，看來好像光耀的金銀合金。</span></div>
+</div>
 <p class="item-title">四活物：5～14節</p>
+<div class="verse-block">
+<div class="verse-line"><span class="verse-ref">結1:5</span><span class="verse-text">又從其中顯出四個活物的樣式來。他們顯出來的樣子是這樣：有人的樣式，</span></div>
+<div class="verse-line"><span class="verse-ref">結1:6</span><span class="verse-text">各有四個臉面，四個翅膀。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:7</span><span class="verse-text">他們的腿是直的，腳掌好像牛犢之蹄，燦爛如明亮的銅。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:8</span><span class="verse-text">在四面的翅膀以下有人的手。這四個活物各有臉面和翅膀如下：</span></div>
+<div class="verse-line"><span class="verse-ref">結1:9</span><span class="verse-text">他們的翅膀彼此相接；他們行走並不轉身，俱各直往前行。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:10</span><span class="verse-text">至於臉的樣式，四活物前面各有<sup class="fn">1</sup>人的臉，右面各有<sup class="fn">1</sup>獅子的臉，左面各有<sup class="fn">1</sup>牛的臉，後面各有鷹的臉。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:11</span><span class="verse-text"><sup class="fn">1</sup>他們的臉就是如此。他們的翅膀向上展開；各有兩個翅膀彼此<sup class="fn">2</sup>相接，兩個翅膀<sup class="fn">3</sup>遮體。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:12</span><span class="verse-text">他們俱各直往前行；靈往那裡去，他們就往那裡去，行走並不轉身。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:13</span><span class="verse-text">至於活物的樣式，他們的樣子如同燒著的火炭，如同火把的樣子；火在活物中間來回閃動，這火有光輝，從火中發出閃電。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:14</span><span class="verse-text">活物往來奔走，好像閃電的樣子。</span></div>
+</div>
 <p class="item-title">高而可畏的輪子：15、19節</p>
+<div class="verse-block">
+<div class="verse-line"><span class="verse-ref">結1:15</span><span class="verse-text">我正觀看活物的時候，見活物的四個<sup class="fn">1</sup>臉旁各有一<sup class="fn">2</sup>輪在地上。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:19</span><span class="verse-text">活物<sup class="fn">1</sup>行走的時候，輪也在旁邊行走；活物從地上升的時候，輪也上升。</span></div>
+</div>
 <div class="original-space" aria-hidden="true"></div>
 </section>
 <section class="content-section theme-fire"><div class="section-deco" aria-hidden="true"></div>
