@@ -799,31 +799,76 @@ body::after {
   }
 }
 
+
+/* ===== 回經文連結 ===== */
+.back-to-verse {
+  margin: -8px 0 24px;
+  text-align: right;
+  position: relative;
+  z-index: 2;
+}
+.back-to-verse a {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: #4f6f8e;
+  background: rgba(91,130,182,.08);
+  border: 1px solid rgba(91,130,182,.15);
+  text-decoration: none;
+  font-family: "Microsoft JhengHei","Noto Sans TC",sans-serif;
+  font-size: .92rem;
+  font-weight: 700;
+  transition: transform .15s ease, background .15s ease;
+}
+.back-to-verse a:hover,
+.back-to-verse a:focus-visible {
+  background: rgba(91,130,182,.15);
+  transform: translateY(-1px);
+}
+.verse-line[id] {
+  scroll-margin-top: 24px;
+}
+.verse-line[id]:target {
+  border-radius: 10px;
+  background: rgba(255,226,153,.28);
+  box-shadow: 0 0 0 6px rgba(255,226,153,.12);
+  animation: verseFlash 1.2s ease-out;
+}
+@keyframes verseFlash {
+  0% { background: rgba(255,214,102,.42); }
+  100% { background: rgba(255,226,153,.28); }
+}
+
 </style>
 </head>
 <body>
 <header class="hero"><div class="hero-orbit"></div><h1>2026年高屏澎青職特會豫讀材料</h1></header>
 <section class="content-section theme-river"><div class="section-deco" aria-hidden="true"></div>
 <h2>經文</h2>
-<div class="scripture-card"><p class="item-title scripture-card-title">引言：1～3節</p><div class="verse-block"><div class="verse-line"><span class="verse-ref">結1:1</span><span class="verse-text">第三十年四月初五日，我在<a class="fn-link" href="#note-1-1-2" aria-label="跳到1章1節註2"><sup class="fn">2</sup></a>迦巴魯河邊被擄的人中，那時諸天開了，我就看見神的異象。</span></div><div class="verse-line"><span class="verse-ref">結1:2</span><span class="verse-text">正是約雅斤王被擄去第五年，四月初五日，</span></div><div class="verse-line"><span class="verse-ref">結1:3</span><span class="verse-text">在迦勒底人之地，迦巴魯河邊，耶和華的話特特臨到布西的兒子祭司以西結；耶和華的手在那裡臨到他身上。</span></div></div></div>
-<div class="scripture-card"><p class="item-title scripture-card-title">風雲火金：4節</p><div class="verse-block"><div class="verse-line"><span class="verse-ref">結1:4</span><span class="verse-text">我觀看，見暴<a class="fn-link" href="#note-1-4-1" aria-label="跳到1章4節註1"><sup class="fn">1</sup></a>風從北方刮來，有一朵大雲，有火不斷的閃爍，周圍有光輝；從其中，就是從火中所發出的，看來好像光耀的金銀合金。</span></div></div></div>
-<div class="scripture-card"><p class="item-title scripture-card-title">四活物：5～14節</p><div class="verse-block"><div class="verse-line"><span class="verse-ref">結1:5</span><span class="verse-text">又從其中顯出四個活物的樣式來。他們顯出來的樣子是這樣：有人的樣式，</span></div><div class="verse-line"><span class="verse-ref">結1:6</span><span class="verse-text">各有四個臉面，四個翅膀。</span></div><div class="verse-line"><span class="verse-ref">結1:7</span><span class="verse-text">他們的腿是直的，腳掌好像牛犢之蹄，燦爛如明亮的銅。</span></div><div class="verse-line"><span class="verse-ref">結1:8</span><span class="verse-text">在四面的翅膀以下有人的手。這四個活物各有臉面和翅膀如下：</span></div><div class="verse-line"><span class="verse-ref">結1:9</span><span class="verse-text">他們的翅膀彼此相接；他們行走並不轉身，俱各直往前行。</span></div><div class="verse-line"><span class="verse-ref">結1:10</span><span class="verse-text">至於臉的樣式，四活物前面各有<a class="fn-link" href="#note-1-10-1" aria-label="跳到1章10節註1"><sup class="fn">1</sup></a>人的臉，右面各有<a class="fn-link" href="#note-1-10-1" aria-label="跳到1章10節註1"><sup class="fn">1</sup></a>獅子的臉，左面各有<a class="fn-link" href="#note-1-10-1" aria-label="跳到1章10節註1"><sup class="fn">1</sup></a>牛的臉，後面各有鷹的臉。</span></div><div class="verse-line"><span class="verse-ref">結1:11</span><span class="verse-text">他們的臉就是如此。他們的翅膀向上展開；各有兩個翅膀彼此相接，兩個翅膀遮體。</span></div><div class="verse-line"><span class="verse-ref">結1:12</span><span class="verse-text">他們俱各直往前行；靈往那裡去，他們就往那裡去，行走並不轉身。</span></div><div class="verse-line"><span class="verse-ref">結1:13</span><span class="verse-text">至於活物的樣式，他們的樣子如同燒著的火炭，如同火把的樣子；火在活物中間來回閃動，這火有光輝，從火中發出閃電。</span></div><div class="verse-line"><span class="verse-ref">結1:14</span><span class="verse-text">活物往來奔走，好像閃電的樣子。</span></div></div></div>
-<div class="scripture-card"><p class="item-title scripture-card-title">高而可畏的輪子：15、19節</p><div class="verse-block"><div class="verse-line"><span class="verse-ref">結1:15</span><span class="verse-text">我正觀看活物的時候，見活物的四個<a class="fn-link" href="#note-1-15-1" aria-label="跳到1章15節註1"><sup class="fn">1</sup></a>臉旁各有一<a class="fn-link" href="#note-1-15-2" aria-label="跳到1章15節註2"><sup class="fn">2</sup></a>輪在地上。</span></div><div class="verse-line"><span class="verse-ref">結1:19</span><span class="verse-text">活物行走的時候，輪也在旁邊行走；活物從地上升的時候，輪也上升。</span></div></div></div>
+<div class="scripture-card"><p class="item-title scripture-card-title">引言：1～3節</p><div class="verse-block"><div class="verse-line" id="verse-1-1"><span class="verse-ref">結1:1</span><span class="verse-text">第三十年四月初五日，我在<a class="fn-link" href="#note-1-1-2" aria-label="跳到1章1節註2"><sup class="fn">2</sup></a>迦巴魯河邊被擄的人中，那時諸天開了，我就看見神的異象。</span></div><div class="verse-line"><span class="verse-ref">結1:2</span><span class="verse-text">正是約雅斤王被擄去第五年，四月初五日，</span></div><div class="verse-line"><span class="verse-ref">結1:3</span><span class="verse-text">在迦勒底人之地，迦巴魯河邊，耶和華的話特特臨到布西的兒子祭司以西結；耶和華的手在那裡臨到他身上。</span></div></div></div>
+<div class="scripture-card"><p class="item-title scripture-card-title">風雲火金：4節</p><div class="verse-block"><div class="verse-line" id="verse-1-4"><span class="verse-ref">結1:4</span><span class="verse-text">我觀看，見暴<a class="fn-link" href="#note-1-4-1" aria-label="跳到1章4節註1"><sup class="fn">1</sup></a>風從北方刮來，有一朵大雲，有火不斷的閃爍，周圍有光輝；從其中，就是從火中所發出的，看來好像光耀的金銀合金。</span></div></div></div>
+<div class="scripture-card"><p class="item-title scripture-card-title">四活物：5～14節</p><div class="verse-block"><div class="verse-line"><span class="verse-ref">結1:5</span><span class="verse-text">又從其中顯出四個活物的樣式來。他們顯出來的樣子是這樣：有人的樣式，</span></div><div class="verse-line"><span class="verse-ref">結1:6</span><span class="verse-text">各有四個臉面，四個翅膀。</span></div><div class="verse-line"><span class="verse-ref">結1:7</span><span class="verse-text">他們的腿是直的，腳掌好像牛犢之蹄，燦爛如明亮的銅。</span></div><div class="verse-line"><span class="verse-ref">結1:8</span><span class="verse-text">在四面的翅膀以下有人的手。這四個活物各有臉面和翅膀如下：</span></div><div class="verse-line"><span class="verse-ref">結1:9</span><span class="verse-text">他們的翅膀彼此相接；他們行走並不轉身，俱各直往前行。</span></div><div class="verse-line" id="verse-1-10"><span class="verse-ref">結1:10</span><span class="verse-text">至於臉的樣式，四活物前面各有<a class="fn-link" href="#note-1-10-1" aria-label="跳到1章10節註1"><sup class="fn">1</sup></a>人的臉，右面各有<a class="fn-link" href="#note-1-10-1" aria-label="跳到1章10節註1"><sup class="fn">1</sup></a>獅子的臉，左面各有<a class="fn-link" href="#note-1-10-1" aria-label="跳到1章10節註1"><sup class="fn">1</sup></a>牛的臉，後面各有鷹的臉。</span></div><div class="verse-line"><span class="verse-ref">結1:11</span><span class="verse-text">他們的臉就是如此。他們的翅膀向上展開；各有兩個翅膀彼此相接，兩個翅膀遮體。</span></div><div class="verse-line"><span class="verse-ref">結1:12</span><span class="verse-text">他們俱各直往前行；靈往那裡去，他們就往那裡去，行走並不轉身。</span></div><div class="verse-line"><span class="verse-ref">結1:13</span><span class="verse-text">至於活物的樣式，他們的樣子如同燒著的火炭，如同火把的樣子；火在活物中間來回閃動，這火有光輝，從火中發出閃電。</span></div><div class="verse-line"><span class="verse-ref">結1:14</span><span class="verse-text">活物往來奔走，好像閃電的樣子。</span></div></div></div>
+<div class="scripture-card"><p class="item-title scripture-card-title">高而可畏的輪子：15、19節</p><div class="verse-block"><div class="verse-line" id="verse-1-15"><span class="verse-ref">結1:15</span><span class="verse-text">我正觀看活物的時候，見活物的四個<a class="fn-link" href="#note-1-15-1" aria-label="跳到1章15節註1"><sup class="fn">1</sup></a>臉旁各有一<a class="fn-link" href="#note-1-15-2" aria-label="跳到1章15節註2"><sup class="fn">2</sup></a>輪在地上。</span></div><div class="verse-line"><span class="verse-ref">結1:19</span><span class="verse-text">活物行走的時候，輪也在旁邊行走；活物從地上升的時候，輪也上升。</span></div></div></div>
 </section>
 <section class="content-section theme-fire"><div class="section-deco" aria-hidden="true"></div>
 <h2>註解</h2>
 <p class="item-title note-anchor" id="note-1-1-2">1章1節註2</p>
 <p class="body-text">這河在巴比倫，幼發拉底河東，最後流入幼發拉底河。迦巴魯，意，強壯、有力。迦巴魯河象徵巴比倫毀壞神子民的力量。（參賽八7～8。）它表徵現今世代將人從神擄到巴比倫的潮流。在以西結書有兩道河：一章的迦巴魯河，和四七章從神殿流出來的河。前者將神的子民從神帶開，毀壞神的建造；後者將人帶到神的生命裏，建造神的居所。（參創二12註1。）</p>
+<p class="back-to-verse"><a href="#verse-1-1">[回經文]</a></p>
 <p class="item-title note-anchor" id="note-1-4-1">1章4節註1</p>
 <p class="body-text">正如整本聖經一樣，以西結書用看得見、物質的事物表徵屬靈的事物。這裏的暴風是神能力之靈的表號。（徒二2，4上。）聖經裏的風有反面和正面的意義。按反面的意義，風是神在人身上審判的象徵或表號；（耶二三19，啟七1；）按正面的意義，風象徵聖靈吹在人身上或降到人身上，使人得着神的生命。（三七9～10，約三6～8，徒二2～21。）這裏的暴風含正面的意義。</p>
+<p class="back-to-verse"><a href="#verse-1-4">[回經文]</a></p>
 <p class="item-title note-anchor" id="note-1-10-1">1章10節註1</p>
 <p class="body-text">每個活物各有四個臉。（6。）人的臉，指明活物活在正確的人性，就是耶穌的人性裏。獅子的臉，指明活物向着罪、世界和撒但是勇敢、剛強、得勝並掌權的。（啟五5，羅五17。）牛的臉，指明活物甘願背負擔子，勞苦作工，甚至犧牲自己。（林前十五10，58，徒二十24，腓二30。）鷹的臉，指明活物在神的生命裏超越、上升並有大能。（約六15，腓四12～13。）</p>
 <p class="body-text">四活物與他們的四個臉表徵一個配搭、團體的實體，就是團體的基督，（林前十二12與註2，）作神在人中間團體的彰顯。四活物的四個臉描繪基督的生活，如四福音所描述的：馬太福音表明基督是獅子，是神國的君王；馬可福音描繪祂是牛，是神的奴僕；路加福音描述祂是人，是人救主；約翰福音表明祂是鷹，就是神。（見太一1註1三段。）因此，四活物乃是基督團體的彰顯，團體的活出基督的生命。</p>
+<p class="back-to-verse"><a href="#verse-1-10">[回經文]</a></p>
 <p class="item-title note-anchor" id="note-1-15-1">1章15節註1</p>
 <p class="body-text">　輪在活物的四個臉旁，指明我們若要有主的行動，首先必須活出主，彰顯主。</p>
+<p class="back-to-verse"><a href="#verse-1-15">[回經文]</a></p>
 <p class="item-title note-anchor" id="note-1-15-2">1章15節註2</p>
 <p class="body-text">　整本聖經，從創世記到啟示錄，陳明神的經綸（弗一10，三9，提前一4）和祂在地上行動以執行祂經綸的完整圖畫。在以西結書，神的經綸與神在祂經綸中的行動，乃是由輪所表徵。這個大輪的輪軸表徵基督作神經綸的中心；輪輞表徵基督的配偶，就是召會，終極完成於新耶路撒冷；由輪軸伸展到輪輞的輪輻表徵作基督肢體的許多信徒。</p>
 <p class="body-text">　在活物旁邊，有輪在地上出現，指明神在地上的行動，是隨着四活物的配搭。輪的行動含示有目的的特別行動，並且也含示這行動不是靠我們自己的力量。</p>
+<p class="back-to-verse"><a href="#verse-1-15">[回經文]</a></p>
 </section>
 <section class="content-section theme-wheel"><div class="section-deco" aria-hidden="true"></div>
 <h2>信息選讀</h2>
