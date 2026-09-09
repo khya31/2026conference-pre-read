@@ -42,12 +42,12 @@ body::before {
   z-index:100;
 }
 .hero {
-  min-height:48vh;
+  min-height:30vh;
   display:grid;
   place-items:center;
   position:relative;
   overflow:hidden;
-  padding:72px 24px 58px;
+  padding:38px 24px 34px;
   isolation:isolate;
   background:
     radial-gradient(circle at 18% 26%, rgba(255,255,255,.9) 0 1px, transparent 2px),
@@ -247,8 +247,8 @@ h2::after {
       linear-gradient(180deg,#edf2f7 0%,#f7f2e9 48%,#eff4f0 100%);
   }
   .hero {
-    min-height:42vh;
-    padding:54px 20px 44px;
+    min-height:26vh;
+    padding:30px 18px 28px;
   }
   h1 {
     font-size:clamp(2rem,10vw,3.1rem);
@@ -351,6 +351,176 @@ h2::after {
   }
 }
 
+
+.fn-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.fn-link .fn {
+  color: #c62828;
+  text-decoration: none;
+}
+.fn-link:hover .fn,
+.fn-link:focus-visible .fn {
+  color: #8e0000;
+  text-decoration: underline;
+}
+.note-anchor {
+  scroll-margin-top: 24px;
+}
+.note-anchor:target {
+  outline: 2px solid rgba(198,40,40,.28);
+  background: linear-gradient(90deg,rgba(198,40,40,.10),rgba(211,164,70,.06));
+  animation: noteFlash 1.3s ease-out;
+}
+@keyframes noteFlash {
+  0% { box-shadow: 0 0 0 8px rgba(198,40,40,.14); }
+  100% { box-shadow: 0 0 0 0 rgba(198,40,40,0); }
+}
+
+
+/* ===== 活潑版美編強化 ===== */
+body {
+  background:
+    radial-gradient(circle at 8% 6%, rgba(100,169,164,.20), transparent 18rem),
+    radial-gradient(circle at 92% 10%, rgba(211,164,70,.18), transparent 20rem),
+    radial-gradient(circle at 14% 48%, rgba(91,130,182,.12), transparent 22rem),
+    radial-gradient(circle at 86% 74%, rgba(213,120,82,.11), transparent 23rem),
+    linear-gradient(180deg,#edf5f4 0%,#f7f1e8 38%,#eef3f7 70%,#f6f0e9 100%);
+}
+
+.hero {
+  border-bottom-left-radius: 34px;
+  border-bottom-right-radius: 34px;
+  box-shadow: 0 18px 42px rgba(35,58,88,.16);
+}
+.hero::before {
+  width:330px;height:330px;
+  right:-90px;top:-95px;
+}
+.hero::after {
+  width:420px;height:190px;
+  left:-90px;bottom:-80px;
+}
+.hero h1 {
+  width:min(700px,90vw);
+  font-size:clamp(1.8rem,5.8vw,3.5rem);
+}
+.hero-orbit {
+  width:min(46vw,330px);
+  opacity:.82;
+}
+.hero-orbit::before {
+  box-shadow:
+    0 0 0 18px rgba(255,255,255,.025),
+    0 0 0 40px rgba(255,215,140,.025);
+}
+
+.content-section {
+  border-radius: 28px;
+  box-shadow:
+    0 18px 52px rgba(37,51,69,.09),
+    inset 0 1px 0 rgba(255,255,255,.82);
+}
+
+/* 每區不同的彩色小裝飾 */
+.content-section::after {
+  content:"";
+  position:absolute;
+  width:88px;height:88px;
+  right:24px;bottom:20px;
+  border-radius:24px 42px 30px 44px;
+  transform:rotate(18deg);
+  opacity:.12;
+  pointer-events:none;
+}
+.theme-river::after {
+  background:linear-gradient(135deg,#58a6aa,#5b82b6);
+}
+.theme-fire::after {
+  background:linear-gradient(135deg,#f1b55a,#d57852);
+}
+.theme-wheel::after {
+  background:linear-gradient(135deg,#d3a446,#8d6b48);
+  border-radius:50%;
+}
+
+/* 標題卡片更活潑 */
+.item-title {
+  background:
+    linear-gradient(90deg,rgba(91,130,182,.11),rgba(100,169,164,.08),rgba(211,164,70,.06));
+  border-left:4px solid rgba(91,130,182,.68);
+  box-shadow:0 4px 14px rgba(70,95,120,.05);
+}
+.item-title:nth-of-type(3n+1) {
+  border-left-color:rgba(100,169,164,.72);
+}
+.item-title:nth-of-type(3n+2) {
+  border-left-color:rgba(211,164,70,.74);
+}
+
+/* 經文卡片 */
+.verse-block {
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.82),rgba(245,249,248,.72));
+  border:1px solid rgba(91,130,182,.10);
+  box-shadow:
+    0 10px 26px rgba(40,60,80,.055),
+    inset 0 1px 0 rgba(255,255,255,.85);
+}
+.verse-ref {
+  color:#3f668b;
+}
+.verse-line {
+  position:relative;
+}
+.verse-line::before {
+  content:"";
+  position:absolute;
+  left:-8px;
+  top:.72em;
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:rgba(211,164,70,.48);
+}
+
+/* 小型彩色分隔點 */
+.reading-title::before {
+  content:"";
+  display:inline-block;
+  width:.52em;
+  height:.52em;
+  margin-right:.42em;
+  border-radius:50% 42% 50% 38%;
+  background:linear-gradient(135deg,#64a9a4,#d3a446);
+  transform:rotate(22deg);
+  vertical-align:.05em;
+}
+
+/* 手機再收斂一點 */
+@media (max-width:640px) {
+  .hero {
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+  .hero h1 {
+    font-size:clamp(1.7rem,8.5vw,2.6rem);
+  }
+  .hero-orbit {
+    width:min(58vw,250px);
+  }
+  .content-section {
+    border-radius:22px;
+  }
+  .content-section::after {
+    width:62px;height:62px;
+    right:12px;bottom:12px;
+    opacity:.09;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -359,17 +529,31 @@ h2::after {
 <h2>經文</h2>
 <p class="item-title">引言：1～3節</p>
 <div class="verse-block">
-<div class="verse-line"><span class="verse-ref">結1:1</span><span class="verse-text">第三十年四月初五日，我在<sup class="fn">2</sup>迦巴魯河邊被擄的人中，那時諸天開了，我就看見神的異象。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:1</span><span class="verse-text">第三十年四月初五日，我在<a class="fn-link" href="#note-1-1-2" aria-label="跳到1章1節註2"><sup class="fn">2</sup></a>迦巴魯河邊被擄的人中，那時諸天開了，我就看見神的異象。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:2</span><span class="verse-text">正是約雅斤王被擄去第五年，四月初五日，</span></div>
+<div class="verse-line"><span class="verse-ref">結1:3</span><span class="verse-text">在迦勒底人之地，迦巴魯河邊，耶和華的話特特臨到布西的兒子祭司以西結；耶和華的手在那裡臨到他身上。</span></div>
+</div>
 <div class="verse-line"><span class="verse-ref">結1:2</span><span class="verse-text">正是約雅斤王被擄去第五年，四月初五日，</span></div>
 <div class="verse-line"><span class="verse-ref">結1:3</span><span class="verse-text">在迦勒底人之地，迦巴魯河邊，耶和華的話特特臨到布西的兒子祭司以西結；耶和華的手在那裡臨到他身上。</span></div>
 </div>
 <p class="item-title">風雲火金：4節</p>
 <div class="verse-block">
-<div class="verse-line"><span class="verse-ref">結1:4</span><span class="verse-text">我觀看，見暴<sup class="fn">1</sup>風從北方刮來，有一朵大雲，有火不斷的閃爍，周圍有光輝；從其中，就是從火中所發出的，看來好像光耀的金銀合金。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:4</span><span class="verse-text">我觀看，見暴<a class="fn-link" href="#note-1-4-1" aria-label="跳到1章4節註1"><sup class="fn">1</sup></a>風從北方刮來，有一朵大雲，有火不斷的閃爍，周圍有光輝；從其中，就是從火中所發出的，看來好像光耀的金銀合金。</span></div>
+</div>
 </div>
 <p class="item-title">四活物：5～14節</p>
 <div class="verse-block">
 <div class="verse-line"><span class="verse-ref">結1:5</span><span class="verse-text">又從其中顯出四個活物的樣式來。他們顯出來的樣子是這樣：有人的樣式，</span></div>
+<div class="verse-line"><span class="verse-ref">結1:6</span><span class="verse-text">各有四個臉面，四個翅膀。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:7</span><span class="verse-text">他們的腿是直的，腳掌好像牛犢之蹄，燦爛如明亮的銅。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:8</span><span class="verse-text">在四面的翅膀以下有人的手。這四個活物各有臉面和翅膀如下：</span></div>
+<div class="verse-line"><span class="verse-ref">結1:9</span><span class="verse-text">他們的翅膀彼此相接；他們行走並不轉身，俱各直往前行。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:10</span><span class="verse-text">至於臉的樣式，四活物前面各有<a class="fn-link" href="#note-1-10-1" aria-label="跳到1章10節註1"><sup class="fn">1</sup></a>人的臉，右面各有<a class="fn-link" href="#note-1-10-1" aria-label="跳到1章10節註1"><sup class="fn">1</sup></a>獅子的臉，左面各有<a class="fn-link" href="#note-1-10-1" aria-label="跳到1章10節註1"><sup class="fn">1</sup></a>牛的臉，後面各有鷹的臉。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:11</span><span class="verse-text">他們的臉就是如此。他們的翅膀向上展開；各有兩個翅膀彼此相接，兩個翅膀遮體。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:12</span><span class="verse-text">他們俱各直往前行；靈往那裡去，他們就往那裡去，行走並不轉身。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:13</span><span class="verse-text">至於活物的樣式，他們的樣子如同燒著的火炭，如同火把的樣子；火在活物中間來回閃動，這火有光輝，從火中發出閃電。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:14</span><span class="verse-text">活物往來奔走，好像閃電的樣子。</span></div>
+</div>
 <div class="verse-line"><span class="verse-ref">結1:6</span><span class="verse-text">各有四個臉面，四個翅膀。</span></div>
 <div class="verse-line"><span class="verse-ref">結1:7</span><span class="verse-text">他們的腿是直的，腳掌好像牛犢之蹄，燦爛如明亮的銅。</span></div>
 <div class="verse-line"><span class="verse-ref">結1:8</span><span class="verse-text">在四面的翅膀以下有人的手。這四個活物各有臉面和翅膀如下：</span></div>
@@ -382,23 +566,25 @@ h2::after {
 </div>
 <p class="item-title">高而可畏的輪子：15、19節</p>
 <div class="verse-block">
-<div class="verse-line"><span class="verse-ref">結1:15</span><span class="verse-text">我正觀看活物的時候，見活物的四個<sup class="fn">1</sup>臉旁各有一<sup class="fn">2</sup>輪在地上。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:15</span><span class="verse-text">我正觀看活物的時候，見活物的四個<a class="fn-link" href="#note-1-15-1" aria-label="跳到1章15節註1"><sup class="fn">1</sup></a>臉旁各有一<a class="fn-link" href="#note-1-15-2" aria-label="跳到1章15節註2"><sup class="fn">2</sup></a>輪在地上。</span></div>
+<div class="verse-line"><span class="verse-ref">結1:19</span><span class="verse-text">活物行走的時候，輪也在旁邊行走；活物從地上升的時候，輪也上升。</span></div>
+</div>
 <div class="verse-line"><span class="verse-ref">結1:19</span><span class="verse-text">活物<sup class="fn">1</sup>行走的時候，輪也在旁邊行走；活物從地上升的時候，輪也上升。</span></div>
 </div>
 <div class="original-space" aria-hidden="true"></div>
 </section>
 <section class="content-section theme-fire"><div class="section-deco" aria-hidden="true"></div>
 <h2>註解</h2>
-<p class="item-title">1章1節註2</p>
+<p class="item-title note-anchor" id="note-1-1-2">1章1節註2</p>
 <p class="body-text">這河在巴比倫，幼發拉底河東，最後流入幼發拉底河。迦巴魯，意，強壯、有力。迦巴魯河象徵巴比倫毀壞神子民的力量。（參賽八7～8。）它表徵現今世代將人從神擄到巴比倫的潮流。在以西結書有兩道河：一章的迦巴魯河，和四七章從神殿流出來的河。前者將神的子民從神帶開，毀壞神的建造；後者將人帶到神的生命裏，建造神的居所。（參創二12註1。）</p>
-<p class="item-title">1章4節註1</p>
+<p class="item-title note-anchor" id="note-1-4-1">1章4節註1</p>
 <p class="body-text">正如整本聖經一樣，以西結書用看得見、物質的事物表徵屬靈的事物。這裏的暴風是神能力之靈的表號。（徒二2，4上。）聖經裏的風有反面和正面的意義。按反面的意義，風是神在人身上審判的象徵或表號；（耶二三19，啟七1；）按正面的意義，風象徵聖靈吹在人身上或降到人身上，使人得着神的生命。（三七9～10，約三6～8，徒二2～21。）這裏的暴風含正面的意義。</p>
-<p class="item-title">1章10節註1</p>
+<p class="item-title note-anchor" id="note-1-10-1">1章10節註1</p>
 <p class="body-text">每個活物各有四個臉。（6。）人的臉，指明活物活在正確的人性，就是耶穌的人性裏。獅子的臉，指明活物向着罪、世界和撒但是勇敢、剛強、得勝並掌權的。（啟五5，羅五17。）牛的臉，指明活物甘願背負擔子，勞苦作工，甚至犧牲自己。（林前十五10，58，徒二十24，腓二30。）鷹的臉，指明活物在神的生命裏超越、上升並有大能。（約六15，腓四12～13。）</p>
 <p class="body-text">四活物與他們的四個臉表徵一個配搭、團體的實體，就是團體的基督，（林前十二12與註2，）作神在人中間團體的彰顯。四活物的四個臉描繪基督的生活，如四福音所描述的：馬太福音表明基督是獅子，是神國的君王；馬可福音描繪祂是牛，是神的奴僕；路加福音描述祂是人，是人救主；約翰福音表明祂是鷹，就是神。（見太一1註1三段。）因此，四活物乃是基督團體的彰顯，團體的活出基督的生命。</p>
-<p class="item-title">1章15節註1</p>
+<p class="item-title note-anchor" id="note-1-15-1">1章15節註1</p>
 <p class="body-text">　輪在活物的四個臉旁，指明我們若要有主的行動，首先必須活出主，彰顯主。</p>
-<p class="item-title">1章15節註2</p>
+<p class="item-title note-anchor" id="note-1-15-2">1章15節註2</p>
 <p class="body-text">　整本聖經，從創世記到啟示錄，陳明神的經綸（弗一10，三9，提前一4）和祂在地上行動以執行祂經綸的完整圖畫。在以西結書，神的經綸與神在祂經綸中的行動，乃是由輪所表徵。這個大輪的輪軸表徵基督作神經綸的中心；輪輞表徵基督的配偶，就是召會，終極完成於新耶路撒冷；由輪軸伸展到輪輞的輪輻表徵作基督肢體的許多信徒。</p>
 <p class="body-text">　在活物旁邊，有輪在地上出現，指明神在地上的行動，是隨着四活物的配搭。輪的行動含示有目的的特別行動，並且也含示這行動不是靠我們自己的力量。</p>
 </section>
