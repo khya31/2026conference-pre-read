@@ -1,1 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>二○二六年高屏澎青職特會豫讀材料</title>
+<style>
+:root {
+  --ink:#243247;
+  --muted:#536176;
+  --paper:rgba(255,255,255,.88);
+  --paper-strong:rgba(255,255,255,.95);
+  --line:rgba(36,50,71,.11);
+  --gold:#d3a446;
+  --blue:#5b82b6;
+  --teal:#64a9a4;
+  --ember:#d57852;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; background:#eef2f6; }
+body {
+  margin:0;
+  color:var(--ink);
+  font-family:"Noto Serif TC","Noto Serif CJK TC","PMingLiU","Microsoft JhengHei",serif;
+  background:
+    radial-gradient(circle at 15% 7%, rgba(111,157,206,.22), transparent 24rem),
+    radial-gradient(circle at 90% 18%, rgba(231,181,92,.22), transparent 26rem),
+    linear-gradient(180deg,#eaf0f6 0%,#f6f1e8 45%,#edf3ef 100%);
+  line-height:1.92;
+  letter-spacing:.035em;
+  overflow-x:hidden;
+}
+body::before {
+  content:"";
+  position:fixed;
+  inset:0 0 auto 0;
+  height:4px;
+  transform-origin:left center;
+  transform:scaleX(var(--progress,0));
+  background:linear-gradient(90deg,#6c91bd,#d2a551,#c87350);
+  z-index:100;
+}
+.hero {
+  min-height:48vh;
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
+  padding:72px 24px 58px;
+  isolation:isolate;
+  background:
+    radial-gradient(circle at 18% 26%, rgba(255,255,255,.9) 0 1px, transparent 2px),
+    radial-gradient(circle at 78% 22%, rgba(255,255,255,.65) 0 1px, transparent 2px),
+    linear-gradient(145deg,#263d60 0%,#375c7c 48%,#8b744f 100%);
+}
+.hero::before,
+.hero::after {
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  filter:blur(2px);
+  opacity:.9;
+  z-index:-1;
+}
+.hero::before {
+  width:420px;height:420px;
+  right:-150px;top:-95px;
+  background:radial-gradient(circle,rgba(255,214,124,.55),rgba(255,214,124,0) 67%);
+}
+.hero::after {
+  width:520px;height:260px;
+  left:-120px;bottom:-110px;
+  background:radial-gradient(ellipse,rgba(174,216,255,.46),rgba(174,216,255,0) 70%);
+}
+.hero-orbit {
+  position:absolute;
+  width:min(72vw,520px);
+  aspect-ratio:1;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:50%;
+  box-shadow:
+    0 0 0 28px rgba(255,255,255,.035),
+    0 0 0 70px rgba(255,255,255,.025);
+  transform:rotate(-18deg);
+}
+.hero-orbit::before,
+.hero-orbit::after {
+  content:"";
+  position:absolute;
+  inset:18%;
+  border:1px solid rgba(246,211,137,.23);
+  border-radius:50%;
+}
+.hero-orbit::after {
+  inset:38%;
+  background:rgba(255,214,128,.10);
+  box-shadow:0 0 80px rgba(255,211,118,.18);
+}
+h1 {
+  margin:0;
+  width:min(760px,92vw);
+  text-align:center;
+  color:#fffdf6;
+  font-size:clamp(2rem,7vw,4.8rem);
+  line-height:1.28;
+  letter-spacing:.10em;
+  text-shadow:0 8px 28px rgba(13,27,45,.28);
+  position:relative;
+  z-index:2;
+  font-weight:800;
+}
+.content-section {
+  width:min(900px,calc(100% - 28px));
+  margin:34px auto;
+  padding:clamp(28px,6vw,58px);
+  border:1px solid rgba(255,255,255,.74);
+  border-radius:34px;
+  background:var(--paper);
+  box-shadow:
+    0 24px 70px rgba(37,51,69,.10),
+    inset 0 1px 0 rgba(255,255,255,.82);
+  backdrop-filter:blur(14px);
+  position:relative;
+  overflow:hidden;
+}
+.content-section::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.30),transparent 18%),
+    radial-gradient(circle at 90% 4%,rgba(255,255,255,.72),transparent 18rem);
+}
+.section-deco {
+  position:absolute;
+  pointer-events:none;
+  z-index:0;
+}
+.theme-river .section-deco {
+  width:420px;height:420px;
+  right:-230px;top:22px;
+  border-radius:44% 56% 62% 38%;
+  border:38px solid rgba(78,137,178,.08);
+  box-shadow:0 0 0 34px rgba(78,137,178,.045);
+  transform:rotate(28deg);
+}
+.theme-fire .section-deco {
+  width:360px;height:360px;
+  right:-185px;top:-80px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 42% 45%,rgba(255,215,122,.26),rgba(214,112,72,.16) 42%,transparent 67%);
+  box-shadow:0 0 0 45px rgba(216,157,80,.045),0 0 0 90px rgba(216,157,80,.025);
+}
+.theme-wheel .section-deco {
+  width:340px;height:340px;
+  right:-170px;top:120px;
+  border:12px solid rgba(151,119,65,.08);
+  border-radius:50%;
+  box-shadow:
+    0 0 0 28px rgba(151,119,65,.045),
+    0 0 0 56px rgba(151,119,65,.028);
+}
+.theme-wheel .section-deco::before,
+.theme-wheel .section-deco::after {
+  content:"";
+  position:absolute;
+  left:50%;top:50%;
+  width:86%;height:2px;
+  background:rgba(151,119,65,.07);
+  transform:translate(-50%,-50%) rotate(35deg);
+}
+.theme-wheel .section-deco::after {
+  transform:translate(-50%,-50%) rotate(-35deg);
+}
+h2, .item-title, .reading-title, .body-text, .scripture, .original-space {
+  position:relative;
+  z-index:1;
+}
+h2 {
+  margin:0 0 30px;
+  padding:0 0 16px;
+  font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif;
+  font-size:clamp(1.55rem,5vw,2.35rem);
+  line-height:1.35;
+  letter-spacing:.12em;
+  color:#233a58;
+  border-bottom:1px solid var(--line);
+}
+h2::after {
+  content:"";
+  position:absolute;
+  left:0;bottom:-1px;
+  width:76px;height:3px;
+  border-radius:99px;
+  background:linear-gradient(90deg,var(--blue),var(--gold));
+}
+.item-title {
+  margin:19px 0 8px;
+  padding:12px 16px 12px 18px;
+  border-radius:16px;
+  font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif;
+  font-weight:700;
+  font-size:clamp(1.05rem,3.8vw,1.24rem);
+  line-height:1.5;
+  background:linear-gradient(90deg,rgba(91,130,182,.10),rgba(211,164,70,.045));
+  border-left:4px solid rgba(91,130,182,.64);
+}
+.body-text {
+  margin:13px 0 24px;
+  font-size:clamp(1.06rem,4vw,1.22rem);
+  text-align:justify;
+  text-justify:inter-ideograph;
+  color:#2e3949;
+  white-space:pre-wrap;
+}
+.reading-title {
+  margin:38px 0 13px;
+  font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif;
+  font-weight:800;
+  font-size:clamp(1.28rem,4.6vw,1.70rem);
+  line-height:1.4;
+  color:#344e68;
+  letter-spacing:.08em;
+}
+.reading-title + .reading-title {
+  margin-top:15px;
+  color:#9b6b35;
+}
+.scripture {
+  margin:14px 0 20px;
+  font-size:clamp(1.02rem,3.8vw,1.16rem);
+  white-space:pre-wrap;
+}
+.original-space { height:8px; }
+.content-section:last-of-type { margin-bottom:70px; }
 
+@media (max-width:640px) {
+  body {
+    line-height:1.86;
+    letter-spacing:.025em;
+    background:
+      radial-gradient(circle at 8% 7%,rgba(111,157,206,.20),transparent 18rem),
+      radial-gradient(circle at 94% 16%,rgba(231,181,92,.18),transparent 18rem),
+      linear-gradient(180deg,#edf2f7 0%,#f7f2e9 48%,#eff4f0 100%);
+  }
+  .hero {
+    min-height:42vh;
+    padding:54px 20px 44px;
+  }
+  h1 {
+    font-size:clamp(2rem,10vw,3.1rem);
+    letter-spacing:.065em;
+  }
+  .content-section {
+    width:calc(100% - 20px);
+    margin:18px auto;
+    padding:28px 20px 34px;
+    border-radius:26px;
+  }
+  h2 { margin-bottom:24px; }
+  .body-text {
+    font-size:1.085rem;
+    line-height:1.95;
+    text-align:left;
+  }
+  .item-title {
+    font-size:1.08rem;
+    margin-top:16px;
+  }
+  .reading-title {
+    font-size:1.34rem;
+    margin-top:32px;
+  }
+}
+@media (prefers-reduced-motion:no-preference) {
+  .hero-orbit { animation:drift 18s ease-in-out infinite alternate; }
+  .theme-fire .section-deco { animation:pulse 9s ease-in-out infinite alternate; }
+  @keyframes drift {
+    from { transform:rotate(-18deg) translate3d(0,0,0); }
+    to { transform:rotate(-11deg) translate3d(-18px,12px,0); }
+  }
+  @keyframes pulse {
+    from { transform:scale(.94); opacity:.80; }
+    to { transform:scale(1.05); opacity:1; }
+  }
+}
+@media print {
+  body { background:#fff; }
+  body::before { display:none; }
+  .hero {
+    min-height:auto;
+    padding:48px 20px;
+    background:#334f70;
+  }
+  .content-section {
+    box-shadow:none;
+    backdrop-filter:none;
+    break-inside:avoid-page;
+  }
+}
+</style>
+</head>
+<body>
+<header class="hero"><div class="hero-orbit"></div><h1>二○二六年高屏澎青職特會豫讀材料</h1></header>
+<section class="content-section theme-river"><div class="section-deco" aria-hidden="true"></div>
+<h2>經文</h2>
+<p class="item-title">引言：1～3節</p>
+<p class="item-title">風雲火金：4節</p>
+<p class="item-title">四活物：5～14節</p>
+<p class="item-title">高而可畏的輪子：15、19節</p>
+<div class="original-space" aria-hidden="true"></div>
+</section>
+<section class="content-section theme-fire"><div class="section-deco" aria-hidden="true"></div>
+<h2>註解</h2>
+<p class="item-title">1章1節註2</p>
+<p class="body-text">這河在巴比倫，幼發拉底河東，最後流入幼發拉底河。迦巴魯，意，強壯、有力。迦巴魯河象徵巴比倫毀壞神子民的力量。（參賽八7～8。）它表徵現今世代將人從神擄到巴比倫的潮流。在以西結書有兩道河：一章的迦巴魯河，和四七章從神殿流出來的河。前者將神的子民從神帶開，毀壞神的建造；後者將人帶到神的生命裏，建造神的居所。（參創二12註1。）</p>
+<p class="item-title">1章4節註1</p>
+<p class="body-text">正如整本聖經一樣，以西結書用看得見、物質的事物表徵屬靈的事物。這裏的暴風是神能力之靈的表號。（徒二2，4上。）聖經裏的風有反面和正面的意義。按反面的意義，風是神在人身上審判的象徵或表號；（耶二三19，啟七1；）按正面的意義，風象徵聖靈吹在人身上或降到人身上，使人得着神的生命。（三七9～10，約三6～8，徒二2～21。）這裏的暴風含正面的意義。</p>
+<p class="item-title">1章10節註1</p>
+<p class="body-text">每個活物各有四個臉。（6。）人的臉，指明活物活在正確的人性，就是耶穌的人性裏。獅子的臉，指明活物向着罪、世界和撒但是勇敢、剛強、得勝並掌權的。（啟五5，羅五17。）牛的臉，指明活物甘願背負擔子，勞苦作工，甚至犧牲自己。（林前十五10，58，徒二十24，腓二30。）鷹的臉，指明活物在神的生命裏超越、上升並有大能。（約六15，腓四12～13。）</p>
+<p class="body-text">四活物與他們的四個臉表徵一個配搭、團體的實體，就是團體的基督，（林前十二12與註2，）作神在人中間團體的彰顯。四活物的四個臉描繪基督的生活，如四福音所描述的：馬太福音表明基督是獅子，是神國的君王；馬可福音描繪祂是牛，是神的奴僕；路加福音描述祂是人，是人救主；約翰福音表明祂是鷹，就是神。（見太一1註1三段。）因此，四活物乃是基督團體的彰顯，團體的活出基督的生命。</p>
+<p class="item-title">1章15節註1</p>
+<p class="body-text">　輪在活物的四個臉旁，指明我們若要有主的行動，首先必須活出主，彰顯主。</p>
+<p class="item-title">1章15節註2</p>
+<p class="body-text">　整本聖經，從創世記到啟示錄，陳明神的經綸（弗一10，三9，提前一4）和祂在地上行動以執行祂經綸的完整圖畫。在以西結書，神的經綸與神在祂經綸中的行動，乃是由輪所表徵。這個大輪的輪軸表徵基督作神經綸的中心；輪輞表徵基督的配偶，就是召會，終極完成於新耶路撒冷；由輪軸伸展到輪輞的輪輻表徵作基督肢體的許多信徒。</p>
+<p class="body-text">　在活物旁邊，有輪在地上出現，指明神在地上的行動，是隨着四活物的配搭。輪的行動含示有目的的特別行動，並且也含示這行動不是靠我們自己的力量。</p>
+</section>
+<section class="content-section theme-wheel"><div class="section-deco" aria-hidden="true"></div>
+<h2>信息選讀</h2>
+<p class="reading-title">開始見異象的地點</p>
+<p class="body-text">第一是在迦勒底人之地，第二是在迦巴魯河邊。迦勒底就是巴比倫。巴比倫是希臘文，希伯來文就是巴別。（創十一9。）這個巴比倫，或說巴別，第一乃是人受撒但的欺騙、擄掠，而反叛神的地方；第二是選民先祖的原在地。從前神就是從巴別這裏，從迦勒底人之地，（創十一31，）把亞伯拉罕召出來，叫亞伯拉罕進到迦南地，站在神所指定的地方，為神作見證。但是現在亞伯拉罕的後裔墮落了，又被仇敵擄到他們先祖原來被霸佔的地方。亞伯拉罕當初被神從巴比倫召出來，現在他的後裔墮落，又回到他原來所在的地方去了。</p>
+<p class="body-text">第二，是在迦巴魯河邊。…生命水河是神來眷顧人，作人的生命和供應。而迦巴魯河乃是指着仇敵來毀壞神子民的力量。…這個迦巴魯河，乃是巴比倫的河，而『迦巴魯』就是巨大、豐盛、有力的意思。這就是指着當初巴比倫的勢力，是巨大的，是豐盛的，是有力的。這一道河就是代表巴比倫的勢力，地上的勢力，是與神的子民作對的。…今天人羣社會中的潮流，就是撒但的迦巴魯河，要把世界的人，連帶神的子民都流去了、沖走了，叫大家都隨流而去。（以西結的異象，第一篇。）</p>
+<p class="reading-title">神榮耀的異象</p>
+<p class="reading-title">風雲火金</p>
+<p class="body-text">風、雲、火、金，四項都是神自己。當神吹到你的時候乃像風；當神臨到你、眷顧你的時候乃像雲；當神在你裏頭運行，焚燒你、純潔你、聖別你的時候乃像火；而當神純潔了你，從你裏面顯出來的時候，就像精金一樣。…每一個基督徒屬靈的歷史，總是開始於風、雲、火、金。不僅如此，這個風雲火金的故事，也是我們一生屬靈經歷裏常有的。（以西結的異象，第一篇。）</p>
+<p class="reading-title">四活物</p>
+<p class="body-text">在風雲火裏面，不光有精金顯耀，還有四個活物顯出來。風吹來雲，雲包括着閃爍的火，火裏又顯出光耀的精金，就在這裏面顯出四個活物來。…聖經中的數字，都有屬靈的意思。四乃是指受造之物，特別是指受造之物裏面的人。…而四活物就是指着我們蒙恩的人。這給我們看見，在風雲火裏面，不光有主自己，也有我們這些蒙恩的人。…這裏的『活物』，原文和創世記二章九節所說生命樹，『生命』那個字同字根，意思就是有生命、活着、活潑、活的。所以中文聖經把這字繙作『活物』，實在繙得好。這字不重『物』，而重在『活』，意思就是活的、活着的、生動的、活潑的。</p>
+<p class="body-text">這四個活物，每一個都有四個臉面。前面是人的臉，右面是獅子的臉，左面是牛的臉，後面是鷹的臉。…請想看這四面的生活，是甚麼生活？沒有疑問，就是活出基督來的生活。…在新約聖經中為甚麼要有四本的福音書？就是因為主耶穌有四面的生活。這四本福音書，就是用來描寫主耶穌的四面。馬太福音描寫祂是君王，馬可福音描寫祂是僕人，路加福音描寫祂真是一個人，而約翰福音描寫祂是神。所以在主耶穌的身上，的確有這四面的講究。一面祂是人；一面祂是王，像獅子一樣；一面祂又是一個僕人，像一隻牛一樣，是勞苦服役的。…另一面，祂又是神，祂是超脫的，就如一隻大鷹。…你這一個活物，你這一個基督徒，若是要像祂，也必須有四面的表現。（以西結的異象，第二篇。）</p>
+<p class="reading-title">大輪隨行</p>
+<p class="body-text">輪子雖是指着行動，但不是指着平常的行動，乃是指着有特別目的的行動。…四活物這裏的大輪，不是指着別的，乃是指着神工作的行動，神行動的大輪。…一個正常的基督徒，無論到甚麼地方，神的工作就要隨着他到甚麼地方。…弟兄姊妹，神所以要我們成為活物，要我們有活物種種的光景，就是為着叫祂行動的大輪能隨着我們轉動。…神的福音，神的工作，的確是一個大輪，隨着地上的基督徒來轉動。…我們無論是作學生，還是作公務員，只要我們是一個活出基督來的人，神聖潔的火在我們身上是一直焚燒的，並且是燒出亮光來的，我們周圍的人定規得救，神福音的輪子定規隨着我們轉動。（以西結的異象，第七篇。）</p>
+</section>
+<script>
+(function() {
+  const root = document.documentElement;
+  const update = () => {
+    const h = root.scrollHeight - root.clientHeight;
+    const p = h > 0 ? root.scrollTop / h : 0;
+    document.body.style.setProperty('--progress', p.toFixed(4));
+  };
+  addEventListener('scroll', update, { passive:true });
+  addEventListener('resize', update);
+  update();
+})();
+</script>
+</body>
+</html>
